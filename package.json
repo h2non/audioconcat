@@ -1,0 +1,34 @@
+{
+  "name": "audioconcat",
+  "version": "0.1.0",
+  "description": "Concat multiple audio files into a unique one (uses ffmpeg)",
+  "repository": "h2non/audioconcat",
+  "author": "Tomas Aparicio",
+  "license": "MIT",
+  "main": "lib",
+  "directories": {
+    "lib": "./lib"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/mocha"
+  },
+  "keywords": [
+    "audio",
+    "mp3",
+    "acc",
+    "join",
+    "concat",
+    "merge",
+    "song",
+    "ffmpeg"
+  ],
+  "dependencies": {
+    "fluent-ffmpeg": "^2.0.0",
+    "lodash.merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1",
+    "rimraf": "^2.2.8"
+  }
+}
