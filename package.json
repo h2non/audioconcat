@@ -5,10 +5,6 @@
   "repository": "h2non/audioconcat",
   "author": "Tomas Aparicio",
   "license": "MIT",
-  "main": "lib",
-  "directories": {
-    "lib": "./lib"
-  },
   "scripts": {
     "test": "./node_modules/.bin/mocha --timeout 300000 --reporter spec --ui tdd"
   },

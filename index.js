@@ -27,7 +27,6 @@ Audioconcat.prototype.concat = function (file) {
 }
 
 function concat(inputs, opts) {
-  //var first = inputs.slice(0, 1).shift()
   var filter = 'concat:' + inputs.join('|')
 
   var renderer = ffmpeg()
