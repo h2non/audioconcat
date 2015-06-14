@@ -1,6 +1,6 @@
 {
   "name": "audioconcat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Concat multiple audio files into a unique one (uses ffmpeg)",
   "repository": "h2non/audioconcat",
   "author": "Tomas Aparicio",
