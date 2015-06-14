@@ -2,6 +2,11 @@
 
 Tiny [node.js](http://nodejs.org) module to concat multiple audio files using ffmpeg
 
+audioconcat provides a programmatic interface to do basically the same as calling `ffmpeg` via CLI like:
+```
+ffmpeg -i "concat:audio1.mp3|audio2.mp3" -acodec copy out.mp3
+```
+
 ## Requirements
 
 - **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
@@ -28,7 +33,7 @@ var songs = [
 ]
 
 audioconcat(songs)
-  .save('all.mp3')
+  .output('all.mp3')
   .on('start', function (command) {
     console.log('ffmpeg process started:', command)
   })
@@ -53,10 +58,13 @@ and optionally passing the video render `options` object per each image.
 
 Supported audio formats: `mp3`, `acc`, `ogg` (based on your ffmpeg compilation)
 
-#### audioconcat#options(arguments)
+#### audioconcat#concat(output)
 
-Add multiple output options as command-line flags to pass to `ffmpeg`.
-The argument must be an `array`
+Concat files and generate the output audio to the given file path.
+
+#### audioconcat#options(options)
+
+Add custom options to ffmpeg
 
 ### audioconcat.VERSION
 Type: `string`
