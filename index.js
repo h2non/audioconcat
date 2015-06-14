@@ -1,11 +1,11 @@
 var merge = require('lodash.merge')
 var ffmpeg = require('fluent-ffmpeg')
 
-module.exports = function audioconcat(inputs, opts) {
+module.exports = function (inputs, opts) {
   return new Audioconcat(inputs, opts)
 }
 
-function Audioconcat(inputs) {
+function Audioconcat(inputs, opts) {
   this.inputs = inputs || []
   this.opts = opts || {}
 }
@@ -23,15 +23,16 @@ Audioconcat.prototype.concat = function (file) {
 }
 
 function concat(inputs, opts) {
-  var first = inputs.slice(0, 1).shift()
-  var output = this.opts.output
+  //var first = inputs.slice(0, 1).shift()
   var filter = 'concat:' + inputs.join('|')
 
-  var renderer = ffmpeg(first)
-    .filter(filer)
+  var renderer = ffmpeg()
+    .input(filter)
+    .outputOptions('-acodec copy')
 
-  if (opts.output) {
-    renderer.save(opts.output)
+  var output = opts.output
+  if (output) {
+    return renderer.save(output)
   }
 
   return renderer
