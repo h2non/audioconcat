@@ -1,6 +1,6 @@
-# audioconcat [![Build Status](https://api.travis-ci.org/h2non/audioconcat.svg?branch=master)][travis] [![Code Climate](https://codeclimate.com/github/h2non/audioconcat/badges/gpa.svg)](https://codeclimate.com/github/h2non/audioconcat) [![NPM](https://img.shields.io/npm/v/audioconcat.svg)][npm] [![Dependency Status](https://gemnasium.com/h2non/audioconcat.svg)][gemnasium]
+# audioconcat [![Build Status](https://api.travis-ci.org/h2non/audioconcat.svg?branch=master)][travis] [![NPM](https://img.shields.io/npm/v/audioconcat.svg)][npm]
 
-Tiny [node.js](http://nodejs.org) module to concat multiple audio files using ffmpeg
+Tiny [node.js](http://nodejs.org) module to concat multiple audio files using [ffmpeg](http://ffmpeg.org)
 
 audioconcat provides a programmatic interface to do basically the same as calling `ffmpeg` via CLI like:
 ```
