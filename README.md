@@ -24,7 +24,7 @@ npm install audioconcat
 ## Usage
 
 ```js
-var videoshow = require('audioconcat')
+var audioconcat = require('audioconcat')
 
 var songs = [
   'beatles.mp3',
@@ -33,7 +33,7 @@ var songs = [
 ]
 
 audioconcat(songs)
-  .output('all.mp3')
+  .concat('all.mp3')
   .on('start', function (command) {
     console.log('ffmpeg process started:', command)
   })
