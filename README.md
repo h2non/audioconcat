@@ -9,7 +9,7 @@ ffmpeg -i "concat:audio1.mp3|audio2.mp3" -acodec copy out.mp3
 
 ## Requirements
 
-- **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libass --enable-libmp3lame`
+- **[ffmpeg](http://ffmpeg.org)** with additional compilation flags `--enable-libmp3lame`
 
 You can download static builds of ffmpeg from [here](http://johnvansickle.com/ffmpeg/).
 
